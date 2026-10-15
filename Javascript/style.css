@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f5fa;
+    color: #333;
+    padding: 25px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #243b64;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #243b64;
+}
+
+.form-container,
+.table-container {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#employeeForm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #356ac3;
+}
+
+button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+}
+
+#submitBtn {
+    background-color: #2878d0;
+}
+
+#submitBtn:hover {
+    background-color: #1d5fa9;
+}
+
+#cancelBtn {
+    background-color: #777;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.controls input,
+.controls select {
+    flex: 1;
+}
+
+#employeeCount {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+th,
+td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #243b64;
+    color: white;
+}
+
+tbody tr:hover {
+    background-color: #f3f6fb;
+}
+
+.edit-btn {
+    background-color: #e6a023;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 650px) {
+    body {
+        padding: 12px;
+    }
+
+    #employeeForm {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .form-container,
+    .table-container {
+        padding: 15px;
+    }
+}
